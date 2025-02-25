@@ -52,3 +52,5 @@ logging:
     com:
       eazybytes:
         loans: DEBUG
+build:
+  version: "2.0"
