@@ -1,11 +1,14 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://team6-eureka-server:8761/eureka
+      defaultZone: http://localhost:8097/eureka
+      # defaultZone: http://team6-eureka-server:8761/eureka
 
 spring:
   config:
-    import: "optional:configserver:http://192.168.100.221:30633/"
+    # import: "optional:configserver:http://192.168.100.221:30633/"
+    import: "optional:configserver:http://localhost:8099/"
+
   kafka:
     bootstrap-servers: 192.168.100.221:30641
   rabbitmq:
