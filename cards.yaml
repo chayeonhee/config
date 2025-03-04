@@ -1,9 +1,9 @@
 server:
-  port: 8098
+  port: 8099
 
 spring:
   profiles:
-    active: "local"
+    active: "prod"
   application:
     name: "cards"
   datasource:
@@ -75,8 +75,8 @@ eureka:
     preferIpAddress: true
     lease-renewal-interval-in-seconds: 10
     lease-expiration-duration-in-seconds: 10
-    hostname: "localhost"
-    # hostname: ${HOSTNAME}
+    # hostname: "localhost"
+    hostname: ${HOSTNAME}
   client:
     fetchRegistry: true
     registerWithEureka: true
