@@ -31,6 +31,8 @@ spring:
     stream:
       default-binder: kafka-binder
       bindings:
+        kafka-output:
+          destination: cha-topic  # Kafka로 전송할 토픽
         kafkaToRabbitFunction-in-0:
           destination: cha-topic  # Kafka에서 읽을 토픽 이름
           group: local-cha  # Kafka 그룹
@@ -80,6 +82,8 @@ management:
 eureka:
   instance:
     preferIpAddress: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 10
   client:
     fetchRegistry: true
     registerWithEureka: true
