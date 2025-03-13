@@ -18,8 +18,18 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
 management:
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+  tracing:
+    enabled: true
+    sampling:
+      probability: 10
+  zipkin:
+    tracing:
+      endpoint: http://team6-zipkin:80/api/v2/spans
   endpoints:
     web:
       exposure:
