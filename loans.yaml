@@ -19,6 +19,9 @@ spring:
       ddl-auto: update
     show-sql: true
 management:
+  metrics:
+    tags:
+      application: "loans"
   prometheus:
     metrics:
       export:
@@ -26,10 +29,10 @@ management:
   tracing:
     enabled: true
     sampling:
-      probability: 10
+      probability: 1.0
   zipkin:
     tracing:
-      endpoint: http://team6-zipkin:80/api/v2/spans
+      endpoint: http://team6-zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
@@ -46,6 +49,7 @@ eureka:
     preferIpAddress: true
     lease-renewal-interval-in-seconds: 10
     lease-expiration-duration-in-seconds: 30
+    hostname: ${HOSTNAME}
   client:
     fetchRegistry: true
     registerWithEureka: true
