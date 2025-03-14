@@ -30,15 +30,15 @@ management:
     env:
       enabled: true
 
-eureka:
-  instance:
-    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 30
-    hostname: localhost
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
+# eureka:
+#   instance:
+#     preferIpAddress: true
+#     lease-renewal-interval-in-seconds: 10
+#     lease-expiration-duration-in-seconds: 30
+#     hostname: localhost
+#   client:
+#     fetchRegistry: true
+#     registerWithEureka: true
 
 info:
   app:
