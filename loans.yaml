@@ -1,5 +1,5 @@
 server:
-  port: 8099
+  port: 8097
 spring:
   profiles:
     active: "local"
@@ -19,9 +19,6 @@ spring:
       ddl-auto: update
     show-sql: true
 management:
-  metrics:
-    tags:
-      application: "loans"
   endpoints:
     web:
       exposure:
