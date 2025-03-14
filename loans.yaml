@@ -22,17 +22,6 @@ management:
   metrics:
     tags:
       application: "loans"
-  prometheus:
-    metrics:
-      export:
-        enabled: true
-  tracing:
-    enabled: true
-    sampling:
-      probability: 1.0
-  zipkin:
-    tracing:
-      endpoint: http://team6-zipkin:9411/api/v2/spans
   endpoints:
     web:
       exposure:
