@@ -1,10 +1,11 @@
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka
-      # defaultZone: http://team6-eureka-server:8761/eureka
+build:
+  version: "2.0"
 
-spring:
-  config:
-    # import: "optional:configserver:http://192.168.100.221:30633/"
-    import: "optional:configserver:http://localhost:8099/"
+cards:
+  message: "Welcome to EazyBank cards related QA APIs "
+  contactDetails:
+    name: "Cherryl Pankaj - QA Lead"
+    email: "cherryl@eazybank.com"
+  onCallSupport:
+    - (310) 875-4367
+    - (201) 236-1267
