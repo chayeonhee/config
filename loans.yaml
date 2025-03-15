@@ -1,55 +1,11 @@
-server:
-  port: 8097
-spring:
-  profiles:
-    active: "prod"
-  application:
-    name: "loans"
-  datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
-  h2:
-    console:
-      enabled: true
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    shutdown:
-      access: unrestricted
-  info:
-    env:
-      enabled: true
-
-eureka:
-  instance:
-    preferIpAddress: true
-    lease-renewal-interval-in-seconds: 5
-    lease-expiration-duration-in-seconds: 5
-    # hostname: localhost
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-
-info:
-  app:
-    name: "loans"
-    description: "Eazy Bank Loans Application"
-    version: "1.0.0"
-
-logging:
-  level:
-    com:
-      eazybytes:
-        loans: DEBUG
 build:
-  version: "1.0"
+  version: "3.0"
+
+loans:
+  message: "Welcome to EazyBank loans related local APIs "
+  contactDetails:
+    name: "Amaal Grega - Developer"
+    email: "amaal@eazybank.com"
+  onCallSupport:
+    - (452) 456-2176
+    - (546) 764-8934
